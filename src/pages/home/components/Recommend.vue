@@ -5,7 +5,7 @@
       <div class="title">
         <img class="title-img" src="http://img1.qunarzz.com/piao/fusion/1711/89/ebc329f16c55bb02.png" alt=""> 猜你喜欢
       </div>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
 
         <img :src="item.imgUrl" alt="" class="item-img">
 
@@ -22,46 +22,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/p0/1508/12/4e6170303c63bdb7070fb1987480afab.water.jpg_200x200_0775a71c.jpg',
-          title: '杭州极地海洋世界',
-          desc: '模拟生态环境里与海洋动物亲密接触'
-        },
-        {
-          id: '0002',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/p0/1809/6b/6b0d71ae741a583da3.img.jpg_200x200_dc19cbb1.jpg',
-          title: '杭州乐园',
-          desc: '长三角地区新一代综合性主题公园'
-        },
-        {
-          id: '0003',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/p0/1603/ae/aecef86d7655873f90.water.jpg_200x200_22a0790e.jpg',
-          title: '杭州野生动物世界',
-          desc: '多功能综合性生态公园'
-        },
-        {
-          id: '0004',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/p0/201301/16/5e3b1c2e19e8d4c693835fbb.jpg_200x200_93a8fd7f.jpg',
-          title: '龙井峡漂流',
-          desc: '🔥好评如潮，小伙伴热推景点~'
-        },
-        {
-          id: '0005',
-          imgUrl:
-            'http://img1.qunarzz.com/sight/p0/1603/57/57ee153a3441d35190.water.jpg_200x200_6626a45a.jpg',
-          title: '杭州飞来峰',
-          desc: '江南少见的古代石窟艺术瑰宝'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

@@ -5,16 +5,16 @@
       <div class="title">
         <img class="title-img" src="http://img1.qunarzz.com/piao/fusion/1711/89/ebc329f16c55bb02.png" alt=""> 猜你喜欢
       </div>
-      <li class="item border-bottom" v-for="item of list" :key="item.id">
+        <router-link :to="'./detail/'+item.id" tag="li" class="item border-bottom" v-for="item of list" :key="item.id">
 
-        <img :src="item.imgUrl" alt="" class="item-img">
+          <img :src="item.imgUrl" alt="" class="item-img">
 
-        <div class="item-info">
-          <p class="item-title">{{item.title}}</p>
-          <p class="item-desc">{{item.desc}}</p>
-          <button class="item-button">查看详情</button>
-        </div>
-      </li>
+          <div class="item-info">
+            <p class="item-title">{{item.title}}</p>
+            <p class="item-desc">{{item.desc}}</p>
+            <button class="item-button">查看详情</button>
+          </div>
+        </router-link>
     </ul>
   </div>
 </template>
@@ -41,12 +41,12 @@ export default {
   background #fff
   font-size 0.4rem
   padding 0.24rem 0 0.26rem
-  height .44rem
+  height 0.44rem
   .title-img
     display inline-block
     width 0.3rem
     height 0.3rem
-    margin-left .2rem
+    margin-left 0.2rem
     vertical-align top
 .item
   display flex

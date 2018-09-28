@@ -39,6 +39,9 @@ export default {
   },
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -68,6 +71,7 @@ export default {
   color #fff
   background $bgColor
   font-size 0.32rem
+  z-index 2
   #header-back-icon
     position absolute
     top 0

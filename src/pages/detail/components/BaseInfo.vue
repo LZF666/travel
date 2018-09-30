@@ -1,12 +1,13 @@
 <template>
-  <div class="baseInfo">
+<div>
+  <div class="baseInfo" v-for="(item, index) of baseInfo" :key="index">
     <div class="baseInfo-first" border-bottom>
       <div class="comment">
         <a href="#" class="baseInfo-link">
           <div>
-            <span class="score">5.0</span>
+            <span class="score">{{item.score}}</span>
             <span class="score-text">分</span>
-            <span class="comment-desc">超赞</span>
+            <span class="comment-desc">{{item.commentDesc}}</span>
           </div>
           <div>
             <span class="totalCommentNum">31098条评论</span>
@@ -30,15 +31,19 @@
     <div class="address">
       <p class="address-text">
         <span class="iconfont" id="detail-address-icon">&#xe633;</span>
-        北京市东城区景山前街4号
+        {{item.address}}
         <span class="iconfont" id="address-next-icon">&#xe66b;</span>
       </p>
     </div>
   </div>
+</div>
 </template>
 <script>
 export default {
-  name: 'BaseInfo'
+  name: 'BaseInfo',
+  props: {
+    baseInfo: Array
+  }
 }
 </script>
 <style lang="stylus" scoped>
@@ -49,6 +54,7 @@ export default {
   margin-bottom 0.1rem
   background #ffffff
   border-radius 0.1rem 0.1rem 0 0
+  border-bottom 0.2rem solid #eee
   .baseInfo-first
     padding-top 0.1rem
     padding-bottom 0.2rem
@@ -140,4 +146,3 @@ export default {
   height 1px
   width 100%
 </style>
-

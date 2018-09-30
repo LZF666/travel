@@ -2,7 +2,7 @@
   <div>
     <detail-banner :sightName="sightName" :bannerImg="bannerImg" :bannerImgs="gallaryImgs"></detail-banner>
     <detail-header></detail-header>
-    <base-info></base-info>
+    <base-info :baseInfo="baseInfo"></base-info>
     <div class="content">
       <detail-list :list="list"></detail-list>
     </div>
@@ -27,7 +27,8 @@ export default {
       sightName: '',
       bannerImg: '',
       gallaryImgs: [],
-      list: []
+      list: [],
+      baseInfo: []
     }
   },
   methods: {
@@ -47,6 +48,7 @@ export default {
         this.bannerImg = data.bannerImg
         this.gallaryImgs = data.gallaryImgs
         this.list = data.categoryList
+        this.baseInfo = data.baseInfo
       }
     }
   },

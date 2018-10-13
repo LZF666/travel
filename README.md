@@ -4,11 +4,11 @@
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:6457
+# serve with hot reload at my project
 npm run dev
 
 # build for production with minification
